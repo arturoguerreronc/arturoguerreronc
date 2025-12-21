@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><svg  xmlns="http://www.w3.org/2000/svg" width="61rem" height="34rem">
+  <defs>
+    <!-- Color variables -->
+    <style>
+      :root {
+        --bg-color: #0d1117;
+        --header-bg: #161b22;
+        --text-color: #c9d1d9;
+        --prompt-color: #58a6ff;
+        --string-color: #a5d6ff;
+        --button-red: #ff5f56;
+        --button-yellow: #ffbd2e;
+        --button-green: #27c93f;
+        --title-color: #8b949e;
+      }
+      .bg { fill: var(--bg-color); }
+      .header-bg { fill: var(--header-bg); }
+      .text { fill: var(--text-color); font-family: monospace; font-size: 14px; }
+      .prompt { fill: var(--prompt-color); font-family: monospace; font-size: 14px; }
+      .string { fill: var(--string-color); font-family: monospace; font-size: 14px; }
+      .title { fill: var(--title-color); font-family: monospace; font-size: 13px; }
+      .cursor { fill: var(--prompt-color); opacity: 0.7; }
+    </style>
+  </defs>
+  
+  <!-- Dark theme background -->
+  <rect width="60rem" height="33rem" class="bg" rx="8" ry="8"/>
+  
+  <!-- Terminal window -->
+  <rect width="60rem" height="2rem" class="header-bg" rx="8" ry="8"/>
+  <rect y="34" width="60rem" height="31rem" class="bg" rx="8" ry="8"/>
+  
+  
+  <!-- Window control buttons -->
+  <circle cx="22" cy="17" r="6" fill="var(--button-red)"/>
+  <circle cx="42" cy="17" r="6" fill="var(--button-yellow)"/>
+  <circle cx="62" cy="17" r="6" fill="var(--button-green)"/>
+  
+  <!-- Title bar text -->
+  <text x="85" y="22" class="title">arturoguerreronc@terminal:~</text>
+  
+  <!-- Terminal content -->
+  <text x="21" y="60" class="prompt">arturoguerreronc@terminal:~$</text>
+  <text x="245" y="60" class="text">whoami</text>
+  
+  <text x="21" y="85" class="text">arturoguerreronc</text>
+  
+  <text x="21" y="110" class="prompt">arturoguerreronc@terminal:~$</text>
+  <text x="245" y="110" class="text">cat about.txt</text>
+  
+  <text x="21" y="135" class="text">Full Stack Developer | Tech Enthusiast | Problem Solver | Uptime: 20 Years, 9 Months, 17 Days</text>
+  <text x="21" y="150" class="text" font-size="10px" fill="#8b949e">Life Expectancy: 26.0%</text>
+  
+  <text x="21" y="175" class="prompt">arturoguerreronc@terminal:~$</text>
+  <text x="245" y="175" class="text">ls skills/</text>
+  
+  <text x="21" y="200" class="text">JavaScript Astro Git AWS PowerBI Excel Figma</text>
+  
+  <text x="21" y="225" class="prompt">arturoguerreronc@terminal:~$</text>
+  <text x="245" y="225" class="text">cat contact.json</text>
+  
+  <text x="21" y="255" class="text">{</text>
+  <text x="21" y="280" class="text">"email": </text>
+  <text x="101" y="280" class="string">"hello@arturoguerrero.me"</text>
+  <text x="297" y="280" class="text">,</text>
+  
+  <text x="21" y="305" class="text">"github": </text>
+  <text x="109" y="305" class="string">"github.com/arturoguerreronc"</text>
+  <text x="337" y="305" class="text">,</text>
+  
+  <text x="21" y="330" class="text">"linkedin": </text>
+  <text x="125" y="330" class="string">"linkedin.com/in/arturoguerreronc"</text>
+  <text x="392" y="330" class="text">,</text>
+  
+  <text x="21" y="355" class="text">"x": </text>
+  <text x="61" y="355" class="string">"x.com/aguerreronc"</text>
+  <text x="210" y="355" class="text">,</text>
+  
+  <text x="21" y="380" class="text">"location": </text>
+  <text x="125" y="380" class="string">"Earth"</text>
+  
+  <text x="21" y="405" class="text">}</text>
+  
+  <text x="21" y="430" class="prompt">arturoguerreronc@terminal:~$</text>
+  <text x="245" y="430" class="text">github --stats</text>
+  
+  <text x="21" y="455" class="text">Repositories: 5</text>
+  <text x="350" y="480" class="text">Stars: 76</text>
+  <text x="350" y="455" class="text">Commits: 32</text>
+  <text x="21" y="480" class="text">Contributions: 89</text>
+  <text x="21" y="505" class="prompt">arturoguerreronc@terminal:~$</text>
+  
+  <!-- Cursor -->
+  <rect x="245" y="492" width="8" height="16" class="cursor"/>
+</svg>
