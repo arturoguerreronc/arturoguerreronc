@@ -92,9 +92,6 @@ def get_github_stats(username, token):
         # For example, JSON decoding or type conversion issues
         print(f"Error processing GitHub API response: {e}")
         return None
-    except KeyError as e:
-        print(f"Unexpected GitHub API response structure, missing key: {e}")
-        return None
     except Exception as e:
         # Fallback for any other unexpected exceptions
         print(f"Unexpected exception in get_github_stats: {e}")
