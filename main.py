@@ -88,10 +88,6 @@ def get_github_stats(username, token):
     except requests.exceptions.RequestException as e:
         print(f"Network or HTTP error while fetching GitHub stats: {e}")
         return None
-    except ValueError as e:
-        # For example, JSON decoding or type conversion issues
-        print(f"Error processing GitHub API response: {e}")
-        return None
     except Exception as e:
         # Fallback for any other unexpected exceptions
         print(f"Unexpected exception in get_github_stats: {e}")
