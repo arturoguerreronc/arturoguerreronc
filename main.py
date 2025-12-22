@@ -60,7 +60,7 @@ def get_github_stats(username, token):
             repos = user.get("repositories", {}).get("totalCount", 0)
             stars = user.get("starredRepositories", {}).get("totalCount", 0)
             
-            # Contribuciones del último año
+            # Contributions from the last year
             contribs = user.get("contributionsCollection")
             if not contribs:
                 print("Contributions data not found.")
