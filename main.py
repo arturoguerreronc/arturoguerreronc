@@ -103,7 +103,7 @@ def calculate_uptime():
     
     uptime_str = f"{r.years} Years, {r.months} Months, {r.days} Days"
     
-    # Esperanza de vida
+    # Life expectancy
     expected_end_date = BIRTH_DATE + relativedelta(years=LIFE_EXPECTANCY_YEARS)
     total_days_expectancy = (expected_end_date - BIRTH_DATE).days
     total_days_lived = (today - BIRTH_DATE).days
