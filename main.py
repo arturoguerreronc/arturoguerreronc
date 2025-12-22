@@ -123,8 +123,8 @@ def update_svg(template_path, output_path, stats, uptime, life_expectancy):
     content = content.replace("{{STARS}}", html.escape(stats["stars"]))
     content = content.replace("{{COMMITS}}", html.escape(stats["commits"]))
     content = content.replace("{{CONTRIBUTIONS}}", html.escape(stats["contributions"]))
-    content = content.replace("{{UPTIME}}", html.escape(uptime))
-    content = content.replace("{{LIFE_EXPECTANCY}}", html.escape(life_expectancy))
+    content = content.replace("{{UPTIME}}", uptime)
+    content = content.replace("{{LIFE_EXPECTANCY}}", life_expectancy)
     
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(content)
