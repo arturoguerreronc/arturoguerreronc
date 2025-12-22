@@ -1,4 +1,5 @@
 import datetime
+import html
 import os
 
 import requests
@@ -19,7 +20,7 @@ def get_github_stats(username, token):
     query = """
     query($login: String!) {
       user(login: $login) {
-        repositories(first: 1, ownerAffiliations: OWNER, isFork: false) {
+        repositories(ownerAffiliations: OWNER, isFork: false) {
           totalCount
         }
         starredRepositories {
@@ -41,7 +42,8 @@ def get_github_stats(username, token):
         response = requests.post(
             "https://api.github.com/graphql",
             json={"query": query, "variables": {"login": username}},
-            headers=headers
+            headers=headers,
+            timeout=15
         )
         
         if response.status_code == 200:
@@ -50,20 +52,28 @@ def get_github_stats(username, token):
                 print("Errors:", data["errors"])
                 return None
                 
-            user = data["data"]["user"]
-            repos = user["repositories"]["totalCount"]
-            stars = user["starredRepositories"]["totalCount"]
+            user = data.get("data", {}).get("user")
+            if not user:
+                print("User data not found.")
+                return None
+
+            repos = user.get("repositories", {}).get("totalCount", 0)
+            stars = user.get("starredRepositories", {}).get("totalCount", 0)
             
-            # Contribuciones del último año
-            contribs = user["contributionsCollection"]
-            total_commits = contribs["totalCommitContributions"]
+            # Contributions from the last year
+            contribs = user.get("contributionsCollection")
+            if not contribs:
+                print("Contributions data not found.")
+                return None
+
+            total_commits = contribs.get("totalCommitContributions", 0)
             total_contributions = (
                 total_commits + 
-                contribs["restrictedContributionsCount"] + 
-                contribs["totalRepositoryContributions"] +
-                contribs["totalPullRequestContributions"] +
-                contribs["totalPullRequestReviewContributions"] +
-                contribs["totalIssueContributions"]
+                contribs.get("restrictedContributionsCount", 0) + 
+                contribs.get("totalRepositoryContributions", 0) +
+                contribs.get("totalPullRequestContributions", 0) +
+                contribs.get("totalPullRequestReviewContributions", 0) +
+                contribs.get("totalIssueContributions", 0)
             )
             
             return {
@@ -75,8 +85,12 @@ def get_github_stats(username, token):
         else:
             print(f"Failed to fetch data: {response.status_code}")
             return None
+    except requests.exceptions.RequestException as e:
+        print(f"Network or HTTP error while fetching GitHub stats: {e}")
+        return None
     except Exception as e:
-        print(f"Exception: {e}")
+        # Fallback for any other unexpected exceptions
+        print(f"Unexpected exception in get_github_stats: {e}")
         return None
 
 def calculate_uptime():
@@ -85,9 +99,10 @@ def calculate_uptime():
     
     uptime_str = f"{r.years} Years, {r.months} Months, {r.days} Days"
     
-    # Esperanza de vida
+    # Life expectancy
+    expected_end_date = BIRTH_DATE + relativedelta(years=LIFE_EXPECTANCY_YEARS)
+    total_days_expectancy = (expected_end_date - BIRTH_DATE).days
     total_days_lived = (today - BIRTH_DATE).days
-    total_days_expectancy = LIFE_EXPECTANCY_YEARS * 365.25
     percentage = (total_days_lived / total_days_expectancy) * 100
     life_expectancy_str = f"{percentage:.1f}%"
     
@@ -95,16 +110,15 @@ def calculate_uptime():
 
 def update_svg(template_path, output_path, stats, uptime, life_expectancy):
     if not os.path.exists(template_path):
-        print(f"Template not found: {template_path}")
-        return
+        raise FileNotFoundError(f"Template not found: {template_path}")
 
     with open(template_path, "r", encoding="utf-8") as f:
         content = f.read()
     
-    content = content.replace("{{REPOS}}", stats["repos"])
-    content = content.replace("{{STARS}}", stats["stars"])
-    content = content.replace("{{COMMITS}}", stats["commits"])
-    content = content.replace("{{CONTRIBUTIONS}}", stats["contributions"])
+    content = content.replace("{{REPOS}}", html.escape(stats["repos"]))
+    content = content.replace("{{STARS}}", html.escape(stats["stars"]))
+    content = content.replace("{{COMMITS}}", html.escape(stats["commits"]))
+    content = content.replace("{{CONTRIBUTIONS}}", html.escape(stats["contributions"]))
     content = content.replace("{{UPTIME}}", uptime)
     content = content.replace("{{LIFE_EXPECTANCY}}", life_expectancy)
     
