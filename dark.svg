@@ -41,40 +41,40 @@
   
   <!-- Terminal content -->
   <text x="21" y="60" class="prompt">arturoguerreronc@terminal:~$</text>
-  <text x="245" y="60" class="text">whoami</text>
+  <text x="251" y="60" class="text">whoami</text>
   
   <text x="21" y="85" class="text">arturoguerreronc</text>
   
   <text x="21" y="110" class="prompt">arturoguerreronc@terminal:~$</text>
-  <text x="245" y="110" class="text">cat about.txt</text>
+  <text x="251" y="110" class="text">cat about.txt</text>
   
   <text x="21" y="135" class="text">Full Stack Developer | Tech Enthusiast | Problem Solver | Uptime: 20 Years, 9 Months, 18 Days</text>
   <text x="21" y="150" class="text" font-size="10px" fill="#8b949e">Life Expectancy: 26.0%</text>
   
   <text x="21" y="175" class="prompt">arturoguerreronc@terminal:~$</text>
-  <text x="245" y="175" class="text">ls skills/</text>
+  <text x="251" y="175" class="text">ls skills/</text>
   
   <text x="21" y="200" class="text">JavaScript Astro Git AWS PowerBI Excel Figma</text>
   
   <text x="21" y="225" class="prompt">arturoguerreronc@terminal:~$</text>
-  <text x="245" y="225" class="text">cat contact.json</text>
+  <text x="251" y="225" class="text">cat contact.json</text>
   
   <text x="21" y="255" class="text">{</text>
   <text x="21" y="280" class="text">"email": </text>
   <text x="101" y="280" class="string">"hello@arturoguerrero.me"</text>
-  <text x="297" y="280" class="text">,</text>
+  <text x="305" y="280" class="text">,</text>
   
   <text x="21" y="305" class="text">"github": </text>
   <text x="109" y="305" class="string">"github.com/arturoguerreronc"</text>
-  <text x="337" y="305" class="text">,</text>
+  <text x="345" y="305" class="text">,</text>
   
   <text x="21" y="330" class="text">"linkedin": </text>
   <text x="125" y="330" class="string">"linkedin.com/in/arturoguerreronc"</text>
-  <text x="392" y="330" class="text">,</text>
+  <text x="400" y="330" class="text">,</text>
   
   <text x="21" y="355" class="text">"x": </text>
   <text x="61" y="355" class="string">"x.com/aguerreronc"</text>
-  <text x="210" y="355" class="text">,</text>
+  <text x="218" y="355" class="text">,</text>
   
   <text x="21" y="380" class="text">"location": </text>
   <text x="125" y="380" class="string">"Earth"</text>
@@ -82,14 +82,14 @@
   <text x="21" y="405" class="text">}</text>
   
   <text x="21" y="430" class="prompt">arturoguerreronc@terminal:~$</text>
-  <text x="245" y="430" class="text">github --stats</text>
+  <text x="251" y="430" class="text">github --stats</text>
   
   <text x="21" y="455" class="text">Repositories: 5</text>
   <text x="350" y="480" class="text">Stars: 76</text>
-  <text x="350" y="455" class="text">Commits: 39</text>
-  <text x="21" y="480" class="text">Contributions: 97</text>
+  <text x="350" y="455" class="text">Commits: 40</text>
+  <text x="21" y="480" class="text">Contributions: 98</text>
   <text x="21" y="505" class="prompt">arturoguerreronc@terminal:~$</text>
   
   <!-- Cursor -->
-  <rect x="245" y="492" width="8" height="16" class="cursor"/>
+  <rect x="251" y="492" width="8" height="16" class="cursor"/>
 </svg>
