@@ -54,7 +54,7 @@
   <text x="21" y="175" class="prompt">arturoguerreronc@terminal:~$</text>
   <text x="251" y="175" class="text">ls skills/</text>
   
-  <text x="21" y="200" class="text">JavaScript Astro Git AWS PowerBI Excel Figma</text>
+  <text x="21" y="200" class="text">JavaScript Python SQL Astro Git AWS PowerBI Excel Figma</text>
   
   <text x="21" y="225" class="prompt">arturoguerreronc@terminal:~$</text>
   <text x="251" y="225" class="text">cat contact.json</text>
@@ -86,8 +86,8 @@
   
   <text x="21" y="455" class="text">Repositories: 5</text>
   <text x="350" y="480" class="text">Stars: 80</text>
-  <text x="350" y="455" class="text">Commits: 54</text>
-  <text x="21" y="480" class="text">Contributions: 112</text>
+  <text x="350" y="455" class="text">Commits: 56</text>
+  <text x="21" y="480" class="text">Contributions: 114</text>
   <text x="21" y="505" class="prompt">arturoguerreronc@terminal:~$</text>
   
   <!-- Cursor -->
