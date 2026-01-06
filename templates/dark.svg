@@ -54,7 +54,7 @@
   <text x="21" y="175" class="prompt">arturoguerreronc@terminal:~$</text>
   <text x="251" y="175" class="text">ls skills/</text>
   
-  <text x="21" y="200" class="text">JavaScript Astro Git AWS PowerBI Excel Figma</text>
+  <text x="21" y="200" class="text">JavaScript Python SQL Astro Git AWS PowerBI Excel Figma</text>
   
   <text x="21" y="225" class="prompt">arturoguerreronc@terminal:~$</text>
   <text x="251" y="225" class="text">cat contact.json</text>
