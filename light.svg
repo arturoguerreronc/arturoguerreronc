@@ -48,7 +48,7 @@
   <text x="21" y="110" class="prompt">arturoguerreronc@terminal:~$</text>
   <text x="251" y="110" class="text">cat about.txt</text>
   
-  <text x="21" y="135" class="text">Software Developer | Data Analyst | Tech Enthusiast | Problem Solver | Uptime: 21 Years, 4 Months, 23 Days</text>
+  <text x="21" y="135" class="text">Software Developer | Data Analyst | Tech Enthusiast | Problem Solver | Uptime: 21 Years, 4 Months, 24 Days</text>
   <text x="21" y="150" class="text" font-size="10px" fill="#666">Life Expectancy: 26.7%</text>
   
   <text x="21" y="175" class="prompt">arturoguerreronc@terminal:~$</text>
@@ -86,8 +86,8 @@
   
   <text x="21" y="455" class="text">Repositories: 5</text>
   <text x="350" y="480" class="text">Stars: 88</text>
-  <text x="350" y="455" class="text">Commits: 61</text>
-  <text x="21" y="480" class="text">Contributions: 119</text>
+  <text x="350" y="455" class="text">Commits: 64</text>
+  <text x="21" y="480" class="text">Contributions: 122</text>
   <text x="21" y="505" class="prompt">arturoguerreronc@terminal:~$</text>
   
   <!-- Cursor -->
